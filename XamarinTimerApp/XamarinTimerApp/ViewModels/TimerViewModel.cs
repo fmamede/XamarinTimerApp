@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace XamarinTimerApp.ViewModels
 {
-    public class AboutViewModel : BaseViewModel
+    public class TimerViewModel : BaseViewModel
     {
-        public AboutViewModel()
+        public TimerViewModel()
         {
             Title = "Timer";
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));

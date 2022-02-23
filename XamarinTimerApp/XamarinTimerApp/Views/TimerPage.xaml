@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinTimerApp.Views.TimerPage"
+             xmlns:vm="clr-namespace:XamarinTimerApp.ViewModels"
+             Title="{Binding Title}">
+
+
+    <ContentPage.BindingContext>
+        <vm:TimerViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Label x:Name="TimerStatusLabel" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Text="Stopped" FontSize="50" Padding="0,160,0,0"></Label>
+        <Label x:Name="TimerStopwatchLabel" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Text="00:00:00" FontSize="40"></Label>
+        <StackLayout Orientation="Horizontal"  VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Spacing="10" Padding="0, 60, 0, 0">
+            <Button x:Name="RestWorkButton" Text="Work" BackgroundColor="LightBlue"></Button>
+            <Button x:Name="PauseButton" Text="Pause" BackgroundColor="Orange"></Button>
+            <Button x:Name="ResetButton" Text="Reset" BackgroundColor="Red"></Button>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>
